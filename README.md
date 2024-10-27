@@ -19,3 +19,12 @@ php artisan schedule:work
 
 ### tek seferde veri çekmek istiyorsanız aşağıdaki komutu kullanabilirsiniz.
 php artisan fetch:crypto-news
+
+### Sürüm Bilgisi
+
+PHP sürümü: 8.2.18
+
+Laravel Sürümü: Laravel 11
+
+Mysql :8.3.0
+

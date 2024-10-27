@@ -40,8 +40,9 @@ public function filter(Request $request)
             ->with('currencies')
             ->get(); // Verileri çekiyoruz
 
-        // Veriyi Redis'e kaydet
-        Redis::set($redisKey, serialize($news));
+        // Veriyi Redis'e 1 saatliğine kaydet
+        Redis::setex($redisKey, 3600, serialize($news));
+
     } else {
         // Redis'ten alınan veriyi deserialize et
         $news = unserialize($news);
